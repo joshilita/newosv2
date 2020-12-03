@@ -11,4 +11,4 @@ echo -e "${BBLUEFG}NewOS V2 is in it's 'first' release. You may get some bugs he
 sleep 2
 echo -e "${GREENFG}Welcome to..."
 sleep 2
-echo -e "${figlet "NewOS V2"}"
+figlet -f slant NewOS V2
