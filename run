@@ -18,5 +18,5 @@ if [ -f "$FILE" ]; then
 echo -e "${BBLUEFG}Weclome! What is your name?"
 read -r name
 echo "${name}" > name.txt
-echo "${GREENFG}Hello ${name!}"
+echo "${GREENFG}Hello ${name}!"
 fi
