@@ -7,7 +7,6 @@ FOLDERNAMEFG="\e[1;38;5;45m"
 ERRORFG="\e[1;38;5;197m"
 RESET="\e[0m"
 BOLD="\e[1m"
-while true do
 echo -e "${BBLUEFG}NewOS V2 is in it's 'first' release. You may get some bugs here and there."
 sleep 2
 echo -e "${GREENFG}Welcome to..."
@@ -23,9 +22,5 @@ echo -e "${GREENFG}Hello ${name}!"
 echo -e "${RESET}Rebooting..."
 sleep 5
 rm -rf ./startup
-continue
-else
-echo "test"
-
+bash ./run
 fi
-done
