@@ -12,6 +12,7 @@ sleep 2
 echo -e "${GREENFG}Welcome to..."
 sleep 2
 figlet -f slant NewOS V2
+echo "Loading..."
 sleep 5 
 FILE=./startup
 if [ -f "$FILE" ]; then
@@ -26,9 +27,15 @@ bash ./run
 fi
 while true; do
 value="$(<name.txt)"  
-echo -e -n "(${GREENFG}${value}${RESET}@${REDWEAKFG}localhost${RESET} ${BBLUEFG}${RESET}) ${BOLD}\$${RESET}";
+echo -e -n "(${GREENFG}${value}${RESET}@${REDWEAKFG}localhost${RESET} ${BBLUEFG}${RESET}) ${BOLD}\$ ${RESET}";
 read input
 if [ "$input" = 'exit' ]; then
 echo -e "${GREENFG} Bye bye ${value}!${RESET}"
+sleep 3 
+exit 0
+elif [ "$input" = 'help' ]; then
+echo -e "${ERRORFG} WIP${RESET}"
+else
+echo -e "${ERRORFG}Command Not Found!${RESET}"
 fi
 done
