@@ -27,4 +27,9 @@ fi
 while true; do
 value="$(<name.txt)"  
 echo -e -n "(${GREENFG}${value}${RESET}@${REDWEAKFG}localhost${RESET} ${BBLUEFG}${RESET}) ${BOLD}\$${RESET}";
+read input
+ if ( echo $input | fgrep -wq -e exit );then
+    echo -e "${GREENFG}Exiting...${RESET}"
+    echo -en "\ec"
+    exit 0
 done
