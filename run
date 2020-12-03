@@ -33,6 +33,17 @@ if [ "$input" = 'exit' ]; then
 echo -e "${GREENFG} Bye bye ${value}!${RESET}"
 sleep 3 
 exit 0
+elif [ "$input" = 'name' ]; then
+echo -e "${GBLUEFG}You want to change your name? (Y/N)"
+read -n1 -r namechange
+if [ "namechange" = 'y' ]; then
+echo -e "${GREENFG}Okay, What do you want your name to be?"
+read namechangenow
+echo "${namechangenow}" > name.txt
+echo -e "${GREENFG}Hello ${name}! Rebooting now."
+bash ./run
+
+fi
 elif [ "$input" = 'help' ]; then
 echo -e "${ERRORFG} WIP${RESET}"
 else
