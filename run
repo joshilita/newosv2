@@ -19,5 +19,4 @@ echo -e "${BBLUEFG}Weclome! What is your name?"
 read -r name
 echo "${name}" > name.txt
 echo "${GREENFG}Hello ${name!}"
-else
 fi
