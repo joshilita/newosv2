@@ -36,7 +36,7 @@ exit 0
 elif [ "$input" = 'name' ]; then
 echo -e "${GBLUEFG}You want to change your name? (Y/N)"
 read -n1 -r namechange
-if [ "namechange" = 'y' ]; then
+if [ "${namechange}" = 'y' ]; then
 echo -e "${GREENFG}Okay, What do you want your name to be?"
 read namechangenow
 echo "${namechangenow}" > name.txt
