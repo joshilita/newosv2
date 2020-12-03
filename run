@@ -25,6 +25,6 @@ rm -rf ./startup
 bash ./run
 fi
 while true do
-value=$(<name.txt)  
-echo -e -n "(${GREENFG}${value}${RESET}@${REDWEAKFG}localhost${RESET} ${BBLUEFG}${RESET}) ${BOLD}\$${RESET}"
+value="$(<name.txt)"  
+echo -e -n "(${GREENFG}${value}${RESET}@${REDWEAKFG}localhost${RESET} ${BBLUEFG}${RESET}) ${BOLD}\$${RESET}";
 done
