@@ -1,0 +1,2 @@
+exit: Exits OS
+help: Shows a list of commands
